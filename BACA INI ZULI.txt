@@ -1,0 +1,16 @@
+web e lagi iso muncul ne 
+pemain
+club
+liga
+lihat pemain
+lihat club
+tak dokok ne folder view trus folder home 
+intine folder home ki isine go tampilan front end web
+nel liane koyo folder club pemain liga jadwal kui go nek halaman admin dadi nek meh ngedit tampilan admine nek view kui
+wes kui sik penting sesuk tampil sik liane ngenteni update meneh sik
+karo tontonen carane load css dan lain lain soale beda carane ro codeigniter luwih simpel sih
+nko bad kok extratck trus pasang database 
+nek terminal vsc ne ketik composer install lagi php artisan serve
+ono composer kan laptopmu
+wes ra ngerti googling
+lagi siap siap meh nyang jakarta aku wkodkawokdoawdowa

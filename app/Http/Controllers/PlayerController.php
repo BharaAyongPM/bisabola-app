@@ -71,7 +71,7 @@ class PlayerController extends Controller
             $path = $request->file('foto')->store('public/foto_pemain');
 
             // Ambil nama file dari path dan simpan ke dalam database
-            $data['foto'] = basename($path);
+            $validatedData['foto'] = basename($path);
         }
         // Generate player_code: BB-tgllahir-randomangka
         $tglLahir = str_replace('-', '', $request->tanggal_lahir);

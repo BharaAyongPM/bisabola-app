@@ -11,6 +11,10 @@
             <input type="text" class="form-control" id="nama_club" name="nama_club" required>
         </div>
         <div class="form-group">
+            <label for="nama_club">Deskripsi:</label>
+            <input type="text" class="form-control" id="deskripsi" name="deskripsi" required>
+        </div>
+        <div class="form-group">
             <label for="alamat">Alamat:</label>
             <input type="text" class="form-control" id="alamat" name="alamat" required>
         </div>

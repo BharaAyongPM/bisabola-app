@@ -2,152 +2,190 @@
 <html lang="en">
 
 <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link href="{{ asset('assets/admin/css/sb-admin-2.min.css') }}" rel="stylesheet">
-    <link href="{{ asset('assets/admin/vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet"type="text/css">
-    <title>Bisa Bola</title>
+  <title>Beranda - Bisabola.id</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <!-- Custom fonts for this template-->
+  <!-- Favicons -->
+  <link href="{{ asset('assets/img/favicon.png') }}" rel="icon">
+  <link href="{{ asset('assets/img/apple-touch-icon.png') }}" rel="apple-touch-icon">
 
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="{{ asset('assets/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/bootstrap-icons/bootstrap-icons.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
+  <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 
+  <!-- Template Main CSS File -->
+  <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Updated: Jun 20 2023 with Bootstrap v5.3.0
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
-<body>
+
+<body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
 
   <!-- ======= Header ======= -->
-  <nav class="navbar navbar-light bg-black">
-        <div class="container col-md-2 col-sm-2">
-            <a class="navbar-brand col-md-2 col-sm-2" href="#">
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
 
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>Bisabola</h1>
+        <span>.</span>
+      </a>
 
-            </a>
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="active">Beranda</a></li>
+          <li><a href="/club">Klub</a></li>
+          <li><a href="/pemain">Pemain</a></li>
+          <li><a href="index.html#portfolio">Galeri</a></li>
+          <li class="dropdown has-dropdown"><a href="/liga"><span>Liga</span> <i class="bi bi-chevron-down"></i></a>
+            <ul class="dd-box-shadow">
+              <li><a href="#">Liga 3</a></li>
+              <!-- <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                <ul class="dd-box-shadow">
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul> -->
+              </li>
+              <li><a href="#">Jakarta Raya League</a></li>
+              <li><a href="#">Student Holiday</a></li>
+              <li><a href="#">Liga Lain</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html">Berita</a></li>
+          <li><a href="index.html#about">Tentang</a></li>
+          <li><a href="kontak.html">Kontak Kami</a></li>
+        </ul>
 
-        </div>
-    </nav>
-  <header id="header" class="sticky-top d-flex ">
-    <!-- <div class="jumbotron fixed-top ">
-      <img src="public/assets/img/logo.png" width="200px" height="155px"><br>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav><!-- End Nav Menu -->
 
-  </div> -->
+      <a class="btn-getstarted" href="/login">Masuk</a>
 
-    <div class="container d-flex align-items-center">
-
-      <div class="logo me-auto">
-         <!-- <h1><a href="index.html">JAKARTA <br>SELECT</a></h1>  -->
-        <!-- Uncomment below if you prefer to use an image logo -->
-
-      </div>
-
-
-
-    <nav id="navbar" class="navbar order-last order-lg-2">
-      <form>
-        <input type="text" placeholder="Cari di sini...">
-        <input type="submit" value="Cari">
-      </form>
-      <ul>
-
-        <li><a class="nav-link scrollto active" href="/">Home</a></li>
-
-
-        <li><a class="nav-link scrollto" href="/liga">liga</a></li>
-        <li><a class="nav-link scrollto" href="/club">Club</a></li>
-
-
-
-
-
-        <li><a class="nav-link scrollto" href="/pemain">Pemain</a></li>
-      </ul>
-      <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
-
-    <!-- <div class="header-social-links d-flex align-items-center">
-      <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-      <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-      <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-      <a href="#" class="linkedin"><i class="bi bi-youtube"></i></i></a>
-    </div> -->
-  </header>
-
-
-
+    </div>
+  </header><!-- End Header -->
   <!-- ... -->
   @yield('content')
-  <!-- Footer -->
-  <footer class="sticky-footer bg-white">
-   <div class="container my-auto">
-       <div class="copyright text-center my-auto">
-           <span>Copyright &copy; Your Website 2021</span>
-       </div>
-   </div>
-</footer>
-<!-- End of Footer -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
 
-</div>
-<!-- End of Content Wrapper -->
+    <div class="container footer-top">
+      <div class="row gy-4">
+        <div class="col-lg-5 col-md-12 footer-about">
+          <a href="index.html" class="logo d-flex align-items-center">
+            <span>Bisabola.id</span>
+          </a>
+          <p>Bisabola.id untuk digitalisasi klub bolamu menjadi lebih efisien, efektif dan terkini.</p>
+          <div class="social-links d-flex mt-4">
+            <a href=""><i class="bi bi-twitter"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-info"></i></a>
+          </div>
+        </div>
 
-</div>
-<!-- End of Page Wrapper -->
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Tautan</h4>
+          <ul>
+            <li><a href="#">Beranda</a></li>
+            <li><a href="#">Tentang Kami</a></li>
+            <li><a href="#">Layanan</a></li>
+            <li><a href="#">Persyaratan Layanan</a></li>
+            <li><a href="#">Kebijakan Pribadi</a></li>
+          </ul>
+        </div>
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-<i class="fas fa-angle-up"></i>
-</a>
+        <div class="col-lg-2 col-6 footer-links">
+          <h4>Digitalisasi</h4>
+          <ul>
+            <li><a href="#">Mengikuti Perkembangan Zaman</a></li>
+            <li><a href="#">Efisiensi Biaya Operasional</a></li>
+            <li><a href="#">Memberikan Kemudahan</a></li>
+            <li><a href="#">Sistem yang Terorganisir Baik</a></li>
+            <!-- <li><a href="#">Graphic Design</a></li> -->
+          </ul>
+        </div>
 
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog" role="document">
-<div class="modal-content">
-   <div class="modal-header">
-       <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-       <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-           <span aria-hidden="true">×</span>
-       </button>
-   </div>
-   <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-   <div class="modal-footer">
-       <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-       <a class="btn btn-primary" href="login.html">Logout</a>
-   </div>
-</div>
-</div>
-</div>
+        <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
+          <h4>Kontak Kami</h4>
+          <p>Jl. Panglima Polim No.116i, RT.01/RW06</p>
+          <p>Kel. Melawai, Kec. Kebayoran Baru</p>
+          <p>Jakarta Selatan, Indonesia, 12130</p>
+          <p class="mt-4"><strong>Telepon:</strong> <span>+62 812345678</span></p>
+          <p><strong>Email:</strong> <span>info@bisabola.id</span></p>
+        </div>
 
-<!-- Bootstrap core JavaScript-->
+      </div>
+    </div>
 
-<script src="{{ asset('assets/admin/vendor/jquery/jquery.min.js') }}"></script>
-<script src="{{ asset('assets/admin/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
-<!-- Core plugin JavaScript-->
+    <div class="container copyright text-center mt-4">
+      <p>&copy; <span>2023</span> <strong class="px-1">BISABOLA.ID</strong> <span>Hak Cipta Dilindungi oleh Undang-Undang</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
+      </div>
+    </div>
+    <div class="whatsapp-button">
+      <a href="https://api.whatsapp.com/send?phone=6281212572061&text=Saya%20Ingin%20Bergabung%20dengan%20Bisabola.id" target="_blank" title="Hubungi melalui WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
 
-<script src="{{ asset('assets/admin/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
-<!-- Custom scripts for all pages-->
+  </footer><!-- End Footer -->
 
-<script src="{{ asset('assets/admin/js/sb-admin-2.min.js') }}"></script>
-<script src="{{ asset('assets/admin/js/filter_players.js') }}"></script>
-<!-- Page level plugins -->
+  <!-- Scroll Top Button -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-<script src="{{ asset('assets/admin/vendor/chart.js/Chart.min.js') }}"></script>
-<!-- Page level custom scripts -->
+  <!-- Preloader -->
+  <div id="preloader">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
 
-<script src="{{ asset('assets/admin/js/demo/chart-pie-demo.js') }}"></script>
-<script src="{{ asset('assets/admin/js/demo/chart-area-demo.js') }}"></script>
-<script src="{{ asset('assets/admin/js/sb-admin-2.min.js') }}"></script>
+  <!-- Vendor JS Files -->
+  <script src="{{ asset('assets/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/glightbox/js/glightbox.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/purecounter/purecounter_vanilla.js') }}"></script>
+  <script src="{{ asset('assets/vendor/isotope-layout/isotope.pkgd.min.js') }}"></script>
+  <script src="{ asset('assets/vendor/swiper/swiper-bundle.min.js') }}"></script>
+  <script src="{{ asset('assets/vendor/aos/aos.js') }}"></script>
+  <script src="{{ asset('assets/vendor/php-email-form/validate.js') }}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{{ asset('assets/js/main.js') }}"></script>
+
 </body>
 
 </html>
-
 
 

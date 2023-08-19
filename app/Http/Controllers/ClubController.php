@@ -25,15 +25,15 @@ class ClubController extends Controller
     public function store(Request $request)
     {
         $user = Auth::user();
-        $data = $request->validate([
+        $validatedData = $request->validate([
             'nama_club' => 'required|string|max:255',
-            'deskrpsi' => 'required|string|max:255',
+            'deskripsi' => 'required|string|max:255',
             'alamat' => 'required|string|max:255',
             'manager' => 'required|string|max:255',
             'pelatih' => 'required|string|max:255',
             'no_telp' => 'required|string|max:255',
             'email' => 'required|email|max:255',
-            'foto' => 'image|mimes:jpeg,png,jpg,gif|max:2048', // Validasi unggah foto
+            'foto' => 'image|mimes:jpeg,png,jpg,gif|max:10048', // Validasi unggah foto
         ]);
 
         // Cek apakah ada foto yang diunggah
@@ -42,10 +42,10 @@ class ClubController extends Controller
             $path = $request->file('foto')->store('public/foto_club');
 
             // Ambil nama file dari path dan simpan ke dalam database
-            $data['foto'] = basename($path);
+            $validatedData['foto'] = basename($path);
         }
 
-        Club::create($data);
+        Club::create($validatedData);
 
         return redirect()->route('clubs.index')->with('success', 'Klub berhasil ditambahkan!');
     }

@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Imports\PlayersImport;
 use Illuminate\Http\Request;
 use App\Models\Player;
 use App\Models\Club;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
+use Maatwebsite\Excel\Facades\Excel;
+
 
 class PlayerController extends Controller
 {
@@ -34,7 +37,7 @@ class PlayerController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function tambah()
     {
         $user = Auth::user();
         $clubs = Club::all();
@@ -132,7 +135,7 @@ class PlayerController extends Controller
             'kota' => 'required',
             'propinsi' => 'required',
             'no_whatsapp' => 'required',
-            'foto' => 'required',
+            // 'foto' => 'required',
             'agama' => 'required',
         ]);
 
@@ -154,5 +157,23 @@ class PlayerController extends Controller
         $player->delete();
 
         return redirect()->route('players.index')->with('success', 'Data pemain berhasil dihapus.');
+    }
+    public function inputexel()
+    {
+        $user = Auth::user();
+        $player = Player::all();
+        $clubs = Club::all();
+        return view('players.import', compact('player', 'clubs', 'user'));
+    }
+
+    public function import(Request $request)
+    {
+        $request->validate([
+            'file' => 'required|mimes:xls,xlsx',
+        ]);
+
+        Excel::import(new PlayersImport, $request->file('file'));
+
+        return redirect()->route('players.index')->with('success', 'Data pemain berhasil diimpor!');
     }
 }

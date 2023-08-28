@@ -77,10 +77,10 @@
 						<a class="nav-link " href="#" id="demoMenu" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">Berita</a>
 					</li>
 					<li class="nav-item ">
-						<a class="nav-link " href="#" id="demoMenu" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">Tentang</a>
+						<a class="nav-link " href="/tentang" id="demoMenu" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">Tentang</a>
 					</li>
 					<li class="nav-item ">
-						<a class="nav-link " href="#" id="demoMenu" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">Kontak Kami</a>
+						<a class="nav-link " href="/kontak" id="demoMenu" data-bs-toggle="" aria-haspopup="true" aria-expanded="false">Kontak Kami</a>
 					</li>
 				</ul>
 			</div>

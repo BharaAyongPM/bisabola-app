@@ -2,7 +2,8 @@
 
 @section('content')
     <h1>Daftar Pemain</h1>
-    <a href="{{ route('players.create') }}" class="btn btn-primary">Tambah Pemain</a>
+    <a href="/player/tambah" class="btn btn-primary">Tambah Pemain</a>
+    <a href="/player/input" class="btn btn-primary">Tambah Pemain Via Exel</a>
      <!-- Filter Club -->
      <div class="form-group">
         <label for="filter_club">Filter Klub:</label>

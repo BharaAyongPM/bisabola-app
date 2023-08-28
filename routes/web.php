@@ -28,6 +28,8 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('liga', [HomeController::class, 'liga'])->name('liga');
 Route::get('club', [HomeController::class, 'club'])->name('club');
 Route::get('pemain', [HomeController::class, 'pemain'])->name('pemain');
+Route::get('kontak', [HomeController::class, 'kontak'])->name('kontak');
+Route::get('tentang', [HomeController::class, 'tentang'])->name('tentang');
 Route::get('lihatclub/{id}', [HomeController::class, 'lihatclub'])->name('lihatclub');
 Route::get('lihatpemain/{id}', [HomeController::class, 'lihatpemain'])->name('lihatpemain');
 
@@ -49,8 +51,17 @@ Route::middleware('auth')->group(function () {
         Route::delete('/clubs/{id}', [ClubController::class, 'destroy'])->name('clubs.destroy');
 
         //pemain
-        Route::resource('players', PlayerController::class)->except(['show']);
+        // Route::resource('players', PlayerController::class)->except(['show']);
+        Route::get('players', [PlayerController::class, 'index'])->name('players.index');
+        Route::get('players/edit/{id}', [PlayerController::class, 'edit'])->name('players.edit');
+        Route::delete('players/destroy/{id}', [PlayerController::class, 'destroy'])->name('players.destroy');
         Route::get('players/{id}', [PlayerController::class, 'show'])->name('players.show');
+        Route::get('player/tambah', [PlayerController::class, 'tambah'])->name('players.create');
+        Route::post('/players/store', [PlayerController::class, 'store'])->name('players.store');
+        Route::get('/player/input', [PlayerController::class, 'inputexel'])->name('show.import');
+        Route::post('/players/import', [PlayerController::class, 'import'])->name('players.import');
+        Route::post('/players/update/{id}', [PlayerController::class, 'update'])->name('players.update');
+        Route::put('/players/update/{id}', [PlayerController::class, 'update'])->name('players.updatee');
 
         Route::get('/leagues', [LeagueController::class, 'index'])->name('leagues.index');
         Route::get('/leagues/create', [LeagueController::class, 'create'])->name('leagues.create');

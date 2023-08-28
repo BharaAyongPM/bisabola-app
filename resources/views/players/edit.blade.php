@@ -1,10 +1,10 @@
 <!-- resources/views/players/edit.blade.php -->
 
-@extends('layouts.app')
+@extends('admin.layouts.app')
 
 @section('content')
     <h1>Edit Pemain</h1>
-    <form action="{{ route('players.update', $player->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('players.updatee', $player->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         @method('PUT')
         <div class="form-group">

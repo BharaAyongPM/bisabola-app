@@ -31,6 +31,7 @@ class HomeController extends Controller
     {
 
         $clubs = Club::all();
+
         return view('home.club', compact('clubs',));
     }
     public function pemain(Request $request)
@@ -50,12 +51,25 @@ class HomeController extends Controller
     {
 
         $club = Club::with('players')->findOrFail($id);
-        return view('home.lihatclub', compact('club'));
+        $playerCount = Player::where('club_id', $id)->count();
+        return view('home.lihatclub', compact('club', 'playerCount'));
     }
     public function lihatpemain($id)
     {
 
         $player = Player::findOrFail($id);
         return view('home.lihatpemain', compact('player',));
+    }
+    public function tentang()
+    {
+
+
+        return view('home.tentang');
+    }
+    public function kontak()
+    {
+
+
+        return view('home.kontak');
     }
 }

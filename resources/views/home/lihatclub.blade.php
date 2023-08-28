@@ -141,7 +141,7 @@
                                 <span class="icon-lg text-success mb-0 bg-success bg-opacity-10 rounded-3"><i class="fas fa-play"></i></span>
                                 <div class="ms-3">
                                     <div class="d-flex">
-                                        <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="17"	data-purecounter-delay="200">0</h5>
+                                        <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="3"	data-purecounter-delay="200">0</h5>
                                         <span class="mb-0 h5"></span>
                                     </div>
                                     <p class="mb-0 h6 fw-light">Staff & Manajer</p>
@@ -154,7 +154,7 @@
                                 <span class="icon-lg text-purple bg-purple bg-opacity-10 rounded-3 mb-0"><i class="fas fa-users"></i></span>
                                 <div class="ms-3">
                                     <div class="d-flex">
-                                        <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="33"	data-purecounter-delay="200">0</h5>
+                                        <h5 class="purecounter mb-0 fw-bold" data-purecounter-start="0" data-purecounter-end="{{ $playerCount }}"	data-purecounter-delay="200">0</h5>
                                         <span class="mb-0 h5"></span>
                                     </div>
                                     <p class="mb-0 h6 fw-light">Total Pemain</p>
